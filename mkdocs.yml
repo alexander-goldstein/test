@@ -1,3 +1,76 @@
 site_name: My Docs
-nav:
-  - index.md
+
+plugins:
+  - search
+  - autolinks
+  - open-in-new-tab
+  # Image zoom functionality
+  - glightbox
+  # Obsidian -> MkDocs admonitions
+  - callouts
+
+theme:
+  name: material
+  features:
+    - navigation.tracking
+    - navigation.top
+
+    - navigation.tabs
+    - navigation.tabs.sticky
+
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+
+    - toc.follow
+    #- toc.integrate
+
+    - search.highlight
+    - search.share
+
+    #- content.code.annotate
+    # Instead just use { .language .annotate } for specific code blocks
+    - content.code.copy
+
+    - content.footnote.tooltips
+
+markdown_extensions:
+  # Table of Contents
+  - toc:
+      toc_depth: 3
+      permalink: true
+  # Strikethrough
+  - pymdownx.tilde
+  # Task checkboxes
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  # Callouts
+  - admonition
+  - callouts # https://github.com/oprypin/markdown-callouts
+  # Code blocks
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.details
+  # Latex / MathJAX / KaTex
+  - pymdownx.arithmatex:
+      generic: true
+  # Footnotes
+  - footnotes
+  # CSS Resize Images
+  - attr_list
+  # Image Captions
+  - pymdownx.blocks.caption
+  # Figures (HTML figure tag)
+  - md_in_html
+  # Dependency: sondregronas/mkdocs-callouts 
+  - nl2br
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js

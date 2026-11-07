@@ -68,7 +68,9 @@ markdown_extensions:
   - pymdownx.blocks.caption
   # Figures (HTML figure tag)
   - md_in_html
-  # Dependency: sondregronas/mkdocs-callouts 
+
+  # Dependencies: 
+  # sondregronas/mkdocs-callouts 
   - nl2br
 
 extra_javascript:

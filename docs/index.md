@@ -3,11 +3,9 @@ created: 2026-11-06
 tags: 
   - your
   - page
-search:
-  exclude: true
-show_toc: true
-title: "You"
 ---
+# Index
+
 This is the main page. There are lots of notes. sdlfkjsd dslkfjds
 
 ## Hi there
